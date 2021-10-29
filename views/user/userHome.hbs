@@ -1,0 +1,14 @@
+<h1>USER</h1>
+<div class="card">
+    <span id="board"></span>
+</div>
+
+<script >
+
+    var socket = io();
+
+    socket.on("bordContent",(msg)=>{
+     alert(msg)
+    document.getElementById('board').innerHTML=msg;
+})
+</script>
